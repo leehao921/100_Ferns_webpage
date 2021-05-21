@@ -1,8 +1,23 @@
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #f2e2aa;
+}
+
 .container {
   display: grid;
   align-content: center;
-  background-color: bisque;
   min-height: 100%;
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+  background-color: #f2e2aa;
+}
+.LayOut {
+  background-color: #bbc25b;
+  width: 100%;
+  padding-left: 47.5px;
+}
+#bar_title {
+  padding-top: 15px;
+  margin-right: 0;
+  font-size: 30px;
 }
