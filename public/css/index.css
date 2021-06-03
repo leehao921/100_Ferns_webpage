@@ -36,6 +36,7 @@ h1 {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   box-shadow: 2px 2px rgba(27, 27, 27, 0.37);
+  cursor: pointer;
 }
 
 .arrowBounce {
