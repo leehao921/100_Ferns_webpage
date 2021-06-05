@@ -11,21 +11,34 @@ class Ferns extends React.Component{
     async componentDidMount() {
         console.log("read stuff")
 
-        firebase.database().ref("plant/").on("value",snapshot=>{
+        firebase.database().ref("plant/").once("value",snapshot=>{
             console.log("read firebase ")
             snapshot.forEach((snap)=>{
                 console.log(snap.val().name+" insert")
-                this.setState({plants:this.state.plants.concat(snap.val())});
+                let content=[];
+                content=snap.val();
+                
+                firebase.storage().ref("Plant/"+content.name+".jpg").getDownloadURL().then((url)=>{
+                    content.URL=url
+                })
 
+                console.log("content: "+content.URL)
+
+                this.setState({plants:this.state.plants.concat(content)});
             });
-            console.log(this.state.plants)
+
+            // this.state.plants.forEach((snap)=>{
+
+            //     firebase.storage().ref("Plant/"+snap.name+".jpg").getDownloadURL().then((url)=>{
+            //         snap.URL=url
+            //     })
+            // })
 
         });
     }
 
     render(){
         let PlantCards=this._getInfo();
-        console.log("init the platform")
         return(
             <div>
                 <h1>demo</h1>
@@ -37,15 +50,16 @@ class Ferns extends React.Component{
 
     _getInfo(){
         console.log("mapping")
-
+        
         return this.state.plants.map((plant) => { 
-            console.log(plant.name)
-            console.log(plant.description)
+            console.log(plant.URL)
+            console.log(plant.name )
             return (
               <Cards 
                 name={plant.name} 
                 body={plant.description} 
-                key={plant.id} 
+                url={plant.URL} 
+
                 />
             ); 
         });
@@ -54,8 +68,18 @@ class Ferns extends React.Component{
 
 
 
+
+
+
+
+
 class Cards extends React.Component{
+
+
     render(){
+        var getImg={
+            backgroundImage: 'url(' + this.props.url + ')',
+        }
         console.log("add card")
         return(
             <div class="flip">
@@ -75,10 +99,7 @@ class Cards extends React.Component{
 }
 
 
-const imgUrl="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg"
-var getImg={
-    backgroundImage: 'url(' + imgUrl + ')',
-}
+
 
 
 ReactDOM.render(
