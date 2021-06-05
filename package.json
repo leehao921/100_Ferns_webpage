@@ -1,0 +1,23 @@
+{
+  "name": "100_Ferns_webpage",
+  "version": "1.0.0",
+  "description": "100_Ferns_webpage ==== ## 5/21 Done: --------- * 內頁標題的初步調整，強制將標題往左，找出能不能 *自動對齊*的方法",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leehao921/100_Ferns_webpage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leehao921/100_Ferns_webpage/issues"
+  },
+  "homepage": "https://github.com/leehao921/100_Ferns_webpage#readme",
+  "dependencies": {
+    "firebase": "^8.6.5"
+  }
+}

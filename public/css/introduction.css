@@ -1,19 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 * {
   box-sizing: border-box;
   font-weight: normal;
+  font-family: "Limelight", cursive;
 }
-
+#bar_title {
+  padding-top: 15px;
+  margin-right: 0;
+  font-size: 30px;
+}
 body {
   color: #555;
   background: #222;
   text-align: center;
-  font-family: "Roboto Mono";
+
   padding: 1em;
 }
 
 h1 {
   font-size: 2.2em;
+}
+p {
+  text-align: left;
 }
 
 .flip {
