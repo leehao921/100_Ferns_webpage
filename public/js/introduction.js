@@ -8,33 +8,32 @@ class Ferns extends React.Component{
 
     };
 }
-    async componentDidMount() {
+    componentDidMount() {
         console.log("read stuff")
-
+        let   content=[];
+        let URL;
         firebase.database().ref("plant/").once("value",snapshot=>{
-            console.log("read firebase ")
+            console.log("read data ")
             snapshot.forEach((snap)=>{
-                console.log(snap.val().name+" insert")
-                let content=[];
-                content=snap.val();
-                
-                firebase.storage().ref("Plant/"+content.name+".jpg").getDownloadURL().then((url)=>{
-                    content.URL=url
+                //content.TEST=snap.val().name.toString();
+                firebase.storage().ref("Plant/"+snap.val().name+".jpg").getDownloadURL().then((url)=>{
+               URL=url;
+               content={
+                "url":URL,
+                "name":snap.val().name,
+               "description":snap.val().description,
+           "id":' ' }
+               console.log(url)
+               console.log("url: "+URL)
+                }).then(()=>{
+                    this.setState({plants:this.state.plants.concat(content)});
                 })
-
-                console.log("content: "+content.URL)
-
-                this.setState({plants:this.state.plants.concat(content)});
+                
             });
-
-            // this.state.plants.forEach((snap)=>{
-
-            //     firebase.storage().ref("Plant/"+snap.name+".jpg").getDownloadURL().then((url)=>{
-            //         snap.URL=url
-            //     })
-            // })
-
-        });
+            
+        })
+        
+        console.log(this.state.plants)
     }
 
     render(){
@@ -52,13 +51,13 @@ class Ferns extends React.Component{
         console.log("mapping")
         
         return this.state.plants.map((plant) => { 
-            console.log(plant.URL)
-            console.log(plant.name )
+            console.log(plant.url)
+            console.log(plant.name)
             return (
               <Cards 
                 name={plant.name} 
                 body={plant.description} 
-                url={plant.URL} 
+                url={plant.url} 
 
                 />
             ); 
