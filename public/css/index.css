@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
-
 body,
 html {
   height: 100%;
   overflow: hidden;
   background-image: url("img/menu.png");
-  min-height: 100%;
   background-position: center;
   background-size: cover;
 }
@@ -19,10 +17,10 @@ h1 {
   text-shadow: 2px 2px rgba(27, 27, 27, 0.37);
 }
 
-#Ferns_Title {
+.Ferns_Title {
   border: 2px solid #c0c0c0;
   height: auto;
-  width: 35%;
+  width: 30%;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -62,9 +60,31 @@ h1 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-5px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-3px);
   }
+}
+
+.menu_container {
+  background-color: rgba(27, 27, 27, 0.37);
+  height: auto;
+  width: 30%;
+  padding: 10px;
+  border: 0.5px solid white;
+  margin: 5px;
+  box-shadow: 2px 2px rgba(27, 27, 27, 0.37);
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
