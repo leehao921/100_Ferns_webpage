@@ -81,7 +81,7 @@ class Cards extends React.Component{
         }
         console.log("add card")
         return(
-            <div class="flip">
+            <div class="flip  w3-animate-bottom">
                 {this.props.key}
                 <div class="front" style={getImg}>
                     <h1 class="text-shadow">{this.props.name}</h1>
