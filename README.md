@@ -1,7 +1,7 @@
-# 百蕨園網站
+# [百蕨園網站](https://ferns-4626b.web.app)
 
 ![網站圖片](https://i.imgur.com/KGNEGv0.jpg)
-
+https://ferns-4626b.web.app
 
 ### 功能介紹 Goals
 ![圖鑑](https://i.imgur.com/UJeNX4t.jpg)
