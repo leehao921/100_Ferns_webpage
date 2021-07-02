@@ -23,14 +23,11 @@ class Ferns extends React.Component{
                 "name":snap.val().name,
                "description":snap.val().description,
            "id":' ' }
-               console.log(url)
                console.log("url: "+URL)
                 }).then(()=>{
                     this.setState({plants:this.state.plants.concat(content)});
                 })
-                
             });
-            
         })
         
         console.log(this.state.plants)
@@ -64,11 +61,6 @@ class Ferns extends React.Component{
         });
     }
 }
-
-
-
-
-
 
 
 
