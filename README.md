@@ -32,7 +32,12 @@
 
 網站的各處都設計有互動性的設計和一些有趣的動畫物件，讓使用者覺得他們不只是在瀏覽一個無聊的文件，更是在暢遊一本會動的植物圖鑑，讓使用者在使用圖鑑上不僅有知識的衝擊更有美學的享受。
 
-### 未來展望 Future
+### TODO 
+- [ ] webpack to manage the 
+- [ ] 網路讀取優化
+- [ ] Ferns Logo- Favi-con
+- [ ] Node.js做環境管理
+- [ ] Footer
 
 
 ## 更新日誌
@@ -65,8 +70,6 @@ class Index extends React.Component{
           </div>
         );
       }
-    
-
 }
 ```
 
