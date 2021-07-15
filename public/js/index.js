@@ -39,6 +39,7 @@ class Welcome extends React.Component{
       ) }
 }
 const margin={margin:"auto",width:"40%"}
+
 class Menu extends React.Component{
     render(){
         return(   
@@ -58,7 +59,8 @@ class Menu extends React.Component{
                 </div>
             </div>
             </div>
-      ) }
+      ) 
+    }
 }
 
 

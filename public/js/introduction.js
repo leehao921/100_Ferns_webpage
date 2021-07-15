@@ -1,3 +1,4 @@
+
 class Ferns extends React.Component{
 
     constructor(){
@@ -38,6 +39,7 @@ class Ferns extends React.Component{
         return(
             <div>
                 <h1>demo</h1>
+                {NavBar}
                 {PlantCards}
             </div>
 
@@ -52,7 +54,7 @@ class Ferns extends React.Component{
             console.log(plant.name)
             return (
               <Cards 
-                name={plant.name} 
+                name={plant.name}
                 body={plant.description} 
                 url={plant.url} 
 
