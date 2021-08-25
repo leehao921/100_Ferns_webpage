@@ -34,14 +34,16 @@ class Ferns extends React.Component{
         console.log(this.state.plants)
     }
 
+
+    
     render(){
         let PlantCards=this._getInfo();
         return(
-            <div>
-                <h1>demo</h1>
-                {NavBar}
-                {PlantCards}
-            </div>
+            <React.Fragment>
+            <NavBar/>
+            {PlantCards}
+            <Footer/>
+            </React.Fragment>
 
         );
     }
